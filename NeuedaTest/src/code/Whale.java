@@ -1,5 +1,8 @@
 package code;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Whale extends Animal {
 
 	private String mainOcean;
@@ -57,6 +60,52 @@ public class Whale extends Animal {
 		System.out.println("Weight (tonnes): " + this.getWeight());
 		System.out.println("Length (meters): " + this.getLength());
 		System.out.println("--------------\n");
+	}
+	
+	public void displayAtlanticWhales() {
+		String ocean = this.getMainOcean();
+		
+		if(ocean.equals("Atlantic")) {
+			System.out.println("Whale");
+			System.out.println("Name: " + this.getName());
+			System.out.println("Main ocean: " + this.getMainOcean());
+			System.out.println("Weight (tonnes): " + this.getWeight());
+			System.out.println("Length (meters): " + this.getLength());
+			System.out.println("--------------\n");
+		}
+	}
+	
+	
+	//Not working - trying to create arraylist of all speeds and then use max method to pull highest value
+	public void displayFastest() {
+		int fastest = 0;
+		for(int i = 0; i < 4; i++) {
+			fastest = this.getMaxSpeed();
+			ArrayList<Integer> fastestArray = new ArrayList<Integer>();
+							
+			fastestArray.add(fastest);
+			
+			for (Integer fastestSpeed : fastestArray) {
+				Collections.max(fastestArray);
+				System.out.println(fastestSpeed);
+			}
+			
+		}
+		
+	}
+	
+	//Not working - displays length of each each whale
+	public void displayLength() {
+		int average = 0;
+		int sum = 0;
+		
+		for(int i = 0; i < this.getLength(); i++) {
+			average = this.getLength();
+			
+		}
+		
+		System.out.println(average);
+		
 	}
 	
 	
