@@ -49,7 +49,15 @@ public class Whale extends Animal {
 		this.length = length;
 	}
 	
-	
+	//Method to get whale properties from object and print to console
+	public void printDetails() {
+		System.out.println("Whale");
+		System.out.println("Name: " + this.getName());
+		System.out.println("Main ocean: " + this.getMainOcean());
+		System.out.println("Weight (tonnes): " + this.getWeight());
+		System.out.println("Length (meters): " + this.getLength());
+		System.out.println("--------------\n");
+	}
 	
 	
 }
